@@ -42,11 +42,11 @@ Copy the *zabbix-pushsafer.py* script to your Zabbix alert scripts directory. Us
 Go to your Zabbix *Administration / Media types* screen and add a new media.
 Specify the name of the script in script name and check that the parameters are correct.
 
-![Configuration screen](https://raw.githubusercontent.com/appzer/resources/master/images/zabbix-pushsafer/assets/zabbix01.jpg)
+![Configuration screen](https://www.pushsafer.com/assets/examples/zabbix01.jpg)
 
 ### Configure the user media
 
 You will need then to add the media to your users. For this just edit an user and add a media selecting the one you just created before.
 Specify the Private or Alias Key in the *Send to* field.
 
-![Configuration screen](https://raw.githubusercontent.com/appzer/resources/master/images/zabbix-pushsafer/assets/zabbix02.jpg)
+![Configuration screen](https://www.pushsafer.com/assets/examples/zabbix02.jpg)
