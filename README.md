@@ -3,7 +3,7 @@ zabbix-pushsafer
 
 ![Pushsafer](https://www.pushsafer.com/de/assets/logos/logo.png)
 
-A python script for sending [pushsafer.com](https://www.pushsafer.net/) notifications in ZABBIX.
+A python script for sending [pushsafer.com](https://www.pushsafer.com/) notifications in ZABBIX.
 
 Forked from and original created by: [sriccio](https://github.com/sriccio/zabbix-alertscripts)
 
