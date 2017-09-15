@@ -18,6 +18,7 @@ import argparse
 import sys
 import time
 import pushsafer
+from pushsafer import init, Client
 
 #
 # Settings
@@ -82,19 +83,9 @@ privatekey = args.privatekey
 subject = args.subject
 message = args.message
 
-# Try to login with privatekey
-try:
-    po = pushsafer.Client(privatekey)
-except (pushsafer.UserError) as exc:
-    l("Error: Can't connect to Pushsafer with Private Key [%s]: " % privatekey)
-    sys.exit(1)
-
 # Try to send the notification
-try:
-    po.send_message(message, subject, "", "", "", "", "", "", "0", "", "", "")
-except (pushsafer.RequestError) as exc:
-    l("Error: Can't send notification to Pushsafer devices: %s" % rlb(str(exc)))
-    sys.exit(1)
+init(privatekey)
+Client("").send_message(message, subject, "", "", "", "", "", "", "", "", "", "")
 
 # Exit with success
 l("Success: Message sent with Private Key [%s]: " % (privatekey))
