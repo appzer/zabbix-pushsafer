@@ -85,7 +85,7 @@ message = args.message
 
 # Try to send the notification
 init(privatekey)
-Client("").send_message(message, subject, "", "", "", "", "", "", "", "", "", "")
+Client("").send_message(message, subject, "", "", "", "", "", "", "", "", "", "", "", "", "", "")
 
 # Exit with success
 l("Success: Message sent with Private Key [%s]: " % (privatekey))
