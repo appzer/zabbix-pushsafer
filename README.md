@@ -13,6 +13,10 @@ Pushsafer make it easy and safe to get push-notifications in real time on your
 - Windows 10 Phone & Desktop
 - Browser (Chrome & Firefox)
 
+### Other versions
+- For CentOS 7 use zabbix-pushsafer-centOS.sh!
+- more parameter use zabbix-pushsafer-more-parameter.py
+
 ### Requirements
 ```bash
 pip install python-pushsafer
@@ -20,8 +24,6 @@ pip install python-pushsafer
 ### Usage
 ```
 usage: zabbix-pushsafer.py [-h] privatekey Subject Message
-
-For CentOS 7 use zabbix-pushsafer-centOS.sh!
 
 Send Zabbix notification to Pushsafer enabled devices.
 
