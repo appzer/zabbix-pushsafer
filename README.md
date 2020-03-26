@@ -21,6 +21,8 @@ pip install python-pushsafer
 ```
 usage: zabbix-pushsafer.py [-h] privatekey Subject Message
 
+For CentOS 7 use zabbix-pushsafer-centOS.sh!
+
 Send Zabbix notification to Pushsafer enabled devices.
 
 positional arguments:
