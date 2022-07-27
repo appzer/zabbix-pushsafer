@@ -13,6 +13,8 @@ Pushsafer make it easy and safe to get push-notifications in real time on your
 - Windows 10 Phone & Desktop
 - Browser (Chrome & Firefox)
 
+[https://github.com/appzer/zabbix-pushsafer](https://github.com/appzer/zabbix-pushsafer)
+
 ### Other versions
 - For CentOS 7 use zabbix-pushsafer-centOS.sh!
 - more parameter use zabbix-pushsafer-more-parameter.py
