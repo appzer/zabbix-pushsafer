@@ -88,7 +88,10 @@ parser.add_argument('time2live', metavar=('time2live'), type=str, help='number 0
 parser.add_argument('priority', metavar=('priority'), type=str, help='-2 = lowest priority, -1 = lower priority, 0 = normal priority, 1 = high priority, 2 = highest priority')
 parser.add_argument('retry', metavar=('retry'), type=str, help='number 60-10800 (60s steps), Time in seconds, after a message shuld resend.')
 parser.add_argument('expire', metavar=('expire'), type=str, help='number 60-10800, Time in seconds, after the retry/resend should stop.')
+parser.add_argument('confirm', metavar=('confirm'), type=str, help='number 10-10800, Time in seconds a message resend unitl it confirmed.')
 parser.add_argument('answer', metavar=('answer'), type=str, help='1 = Answer is possible, 0 = Answer is not possible.')
+parser.add_argument('answeroptions', metavar=('answeroptions'), type=str, help='predefined answer options divided by a pipe character e.g. Yes|No|Maybe')
+parser.add_argument('answerforce', metavar=('answerforce'), type=str, help='1 = Force Answer')
 
 # Argument processing
 args = parser.parse_args()
@@ -105,11 +108,14 @@ time2live = args.time2live
 priority = args.priority
 retry = args.retry
 expire = args.expire
+confirm = args.confirm
 answer = args.answer
+answeroptions = args.answeroptions
+answerforce = args.answerforce
 
 # Try to send the notification
 init(privatekey)
-Client("").send_message(message, subject, device, icon, sound, vibration, url, urltitle, time2live, priority, retry, expire, answer, "", "", "")
+Client("").send_message(message, subject, device, icon, sound, vibration, url, urltitle, time2live, priority, retry, expire, confirm, answer, answeroptions, answerforce, "", "", "")
 
 # Exit with success
 l("Success: Message sent with Private Key [%s]: " % (privatekey))
